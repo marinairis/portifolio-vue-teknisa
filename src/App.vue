@@ -22,7 +22,7 @@ export default {
         }
     },
     created () {
-        axios.get('https://bernardosantos.zeedhi.com/workfolder/dev.php').then((response) => {
+        axios.get('https://bernardosantos.zeedhi.com/workfolder/dev.php'k).then((response) => {
             this.devs = response.data.devs
             this.filtredDevs = response.data.devs
             console.log(this.devs)

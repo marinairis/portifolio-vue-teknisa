@@ -28,7 +28,6 @@
                 checked
               />
               <label>E</label>
-
               <input
                 type="radio"
                 v-model="modo"
@@ -52,7 +51,6 @@
               />
               <label>Java</label>
             </div>
-
             <div class="php language">
               <input
                 type="checkbox"
@@ -97,7 +95,7 @@
 
 <script>
 export default {
-  name: "SearchDevelopers",
+  name: "HeaderComponent",
   data() {
     return {
       modo: "e",
@@ -109,6 +107,7 @@ export default {
     modo: function () {
       this.$emit("changeModo", this.modo);
     },
+
     linguagem: function () {
       this.$emit("changeLinguagem", this.linguagem);
     },
@@ -127,62 +126,49 @@ export default {
     align-items: center;
     gap: 0.6rem;
   }
-
   header {
     background: #ffffff;
     padding: 1rem;
   }
-
   header h1 {
     background: #ffffff;
     line-height: 2.625rem;
     font-size: 2.188rem;
   }
-
   header section {
     display: flex;
     margin-top: 1rem;
   }
-
   label {
     font-weight: 600;
   }
-
   .search {
     width: 72%;
   }
-
   .search label {
     display: block;
   }
-
   .container-languages {
     display: flex;
   }
-
   .filter {
     margin-right: 0.9rem;
   }
-
   .search input {
     width: 98.9%;
     margin-top: 0.5rem;
     padding: 0.6rem;
   }
-
   .optionsfilter {
     margin-top: 0.5rem;
   }
-
   .optionsfilter label:first-of-type {
     margin-right: 0.5rem;
   }
-
   .languages {
     display: flex;
     flex-wrap: wrap;
   }
-
   .language {
     flex-basis: 50%;
     margin-top: 0.5rem;

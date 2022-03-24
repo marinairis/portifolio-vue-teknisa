@@ -27,7 +27,6 @@
                 />
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -37,7 +36,7 @@
 
 <script>
 export default {
-  name: "CardsList",
+  name: "GridComponent",
   props: ["devs"],
   data() {
     return {
@@ -60,13 +59,13 @@ export default {
       var devLangs = "";
       for (var i = 0; i < devLength; i++) {
         devLangs += `<img src=${this.imgLang[dev.programmingLanguages[i].id]}>
-                              <span >${
-                                dev.programmingLanguages[i].language
-                              }</span>
-                              <label >${
-                                dev.programmingLanguages[i].experience
-                              }</label>
-                            `;
+                            <span >${
+                              dev.programmingLanguages[i].language
+                            }</span>
+                            <label >${
+                              dev.programmingLanguages[i].experience
+                            }</label>
+                          `;
       }
       this.$modal.show(
         {
@@ -120,7 +119,6 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.15) 0 0.5rem 0.5rem;
     border-radius: 0.5rem;
   }
-
   .card {
     display: flex;
     margin: 0 1.5rem 1.5rem 0;
@@ -130,212 +128,168 @@ export default {
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
-
   .card img {
     width: 7.5rem;
     height: 7.125rem;
     border-top-left-radius: 0.6rem;
     border-bottom-left-radius: 0.6rem;
   }
-
   .info-card {
     width: 100%;
   }
-
   .info-card img {
     width: 1.313rem;
     height: 1.313rem;
     position: relative;
     top: 1rem;
   }
-
   .card-title {
     margin-left: 1.2rem;
   }
-
   .description {
     padding: 1rem;
     display: block;
   }
-
   .description small {
     display: block;
     color: #7b7b7b;
     margin-top: 0.1rem;
   }
-
   .adjust {
     margin-bottom: 0.6rem;
   }
-
   .container {
     width: 100%;
   }
-
   .container h2 {
     margin: 1rem;
   }
-
   .dev-name {
     font-weight: bold;
   }
-
   .box {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     margin: 1rem;
   }
-
   .modalinfo {
     padding: 1rem;
     display: flex;
   }
-
   .dev-img img {
     width: 7.5rem;
     height: 9.313rem;
   }
-
   .heroinfo {
     width: 100%;
   }
-
   .dev-box {
     display: flex;
     justify-content: space-between;
   }
-
   .infowidth {
     margin-left: 1.2rem;
   }
-
   .infowidth p {
     width: 25rem;
   }
-
   .modal-contacts {
     margin-top: 1rem;
   }
-
   .modal-contacts h3 {
     margin-bottom: 0.6rem;
   }
-
   .modal-languages h3 {
     margin-bottom: 0.6rem;
   }
-
   .modal-language {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0.5rem;
     align-items: center;
   }
-
   .modal-language label {
     font-weight: bold;
   }
-
   .modal-language img {
     width: 1.2rem;
   }
-
   .modal-language span {
     margin-right: 5rem;
   }
-
   @media (max-width: 1100px) {
     .box {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-
   @media (max-width: 800px) {
     .box {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-
   @media (max-width: 567px) {
     .modal {
       width: 23.5rem;
     }
-
     .dev-img {
       height: 15rem;
     }
-
     .modal-contacts {
       width: 13.9rem;
       position: relative;
       right: 8.7rem;
     }
-
     .modal-languages {
       position: relative;
       right: 8.7rem;
     }
-
     .modal-contacts p {
       font-size: 0.9rem;
       width: 1rem;
     }
-
     .dev-box {
       justify-content: flex-start;
     }
-
     .dev-box h2 {
       /* font-size: 1.2rem; */
       margin-right: 4rem;
     }
-
     .infowidth p {
       width: 9rem;
     }
-
     .containerhero {
       width: 15rem;
     }
-
     .modalinfo h2,
     h3 {
       font-size: 1.2rem;
     }
-
     .modalinfo p {
       width: 9rem;
     }
   }
-
   @media (max-width: 565px) {
     .box {
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
-
     .filter {
       display: flex;
       margin-right: 1rem;
     }
-
     .first-section {
       display: block;
     }
-
     .container-languages {
       display: flex;
     }
-
     .filter {
       display: block;
     }
-
     .search {
       width: 100%;
       margin-bottom: 1.5rem;
     }
   }
-
   @media (max-width: 279px) {
     html {
       font-size: 0.7rem;
